@@ -1,0 +1,18 @@
+[2021-06-08 19:43:06] [info] Start Program:
+Path:"E:\\FACULTATE\\ANU 1\\SEMESTRUL 2\\oop\\QtWidgetsApplication1\\x64\\Debug\\QtWidgetsApplication1.exe"
+Arguments:
+Working directory: "E:\\FACULTATE\\ANU 1\\SEMESTRUL 2\\oop\\QtWidgetsApplication1\\QtWidgetsApplication1\\"
+Modules: Selected: E:\FACULTATE\ANU 1\SEMESTRUL 2\oop\QtWidgetsApplication1\x64\Debug\QtWidgetsApplication1.exe Excluded: 
+Sources: Selected: E:\FACULTATE\ANU 1\SEMESTRUL 2\oop\lab6_7\lab6_7 E:\FACULTATE\ANU 1\SEMESTRUL 2\oop\QtWidgetsApplication1\QtWidgetsApplication1 Excluded: 
+Log Level: Normal
+Cover Children: 0
+Aggregate by file: 1
+Continue after C++ exception: 0
+Optimized build support: 0
+Export: binary C:\Users\popam\AppData\Local\Temp\0v1soptn.rnc 
+Input coverage: 
+Unified diff: 
+Excluded line regular expressions: 
+Substitute pdb source paths: 
+
+[2021-06-08 19:43:23] [info] Module: E:\FACULTATE\ANU 1\SEMESTRUL 2\oop\QtWidgetsApplication1\x64\Debug\QtWidgetsApplication1.exe is selected because it matches selected pattern: E:\FACULTATE\ANU 1\SEMESTRUL 2\oop\QtWidgetsApplication1\x64\Debug\QtWidgetsApplication1.exe
