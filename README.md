@@ -1,2 +1,2 @@
 "# PersProjects" 
-Here are the projects described in CV ;)
+Here are the projects described in the CV ;)
