@@ -1,0 +1,10 @@
+ENG1,limba_engleza,A1,70
+GER1,limba_germana,C2,125
+SPN23,limba_spaniola,B2,86
+SPN24,limba_spaniola,B1,22
+7,limba_maghiara,A1,100
+9,limba_maghiara,B3,900
+12,limba_engleza,B5,12
+13,limba_engleza,A2,14
+14,limba_engleza,U1,444
+15,limba_maghiara,U8,444
