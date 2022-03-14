@@ -1,0 +1,19 @@
+.table-view .column-header {
+    -fx-border-style: hidden;
+}
+
+.table-column {
+    -fx-border-style: hidden;
+}
+
+.table-view {
+    -fx-border-style: hidden;
+}
+
+.table-row-cell {
+    -fx-border-style: hidden;
+}
+
+.table-cell {
+    -fx-border-style: hidden;
+}

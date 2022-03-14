@@ -1,0 +1,52 @@
+.list-view {
+    -fx-hbar-policy: never;
+}
+
+.scroll-bar {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+.list-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: -7;
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#notificationView {
+    -fx-hbar-policy: never;
+    -fx-background-color: rgba(50, 50, 50, 0.4);
+}
+
+#notificationView .list-cell {
+    -fx-background-color: transparent;
+}
+
+#notificationViewTextCell {
+    -fx-border-color: transparent transparent rgba(200, 200, 200, 0.7) transparent;
+}
+
+#notificationText {
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-fill: rgba(200, 200, 200, 0.7);
+}
+
+#notificationView .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: -7;
+}
+
+#notificationView .scroll-bar {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#notificationView .scroll-bar .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#conversation {
+    -fx-border-color: transparent transparent rgba(200, 200, 200, 0.7) transparent;
+}

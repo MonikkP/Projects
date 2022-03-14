@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutY="3.0" prefHeight="485.0" prefWidth="436.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.NewEventController">
+   <children>
+      <ImageView fitHeight="522.0" fitWidth="436.0" layoutY="-2.0" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" pickOnBounds="true">
+         <image>
+            <Image url="@../images/login_backround.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="65.0" prefHeight="46.0" prefWidth="436.0" text="Do you want to create an event?" textFill="#aca8a8">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="158.0" layoutY="125.0" opacity="0.66" prefHeight="26.0" prefWidth="197.0" promptText="Enter the name for your event" AnchorPane.leftAnchor="158.0" />
+      <TextField fx:id="descriptionTextField" layoutX="157.0" layoutY="178.0" opacity="0.66" prefHeight="26.0" prefWidth="198.0" promptText="Enter the description for your event" AnchorPane.leftAnchor="158.0" />
+      <TextField fx:id="locationTextField" layoutX="157.0" layoutY="232.0" opacity="0.66" prefHeight="26.0" prefWidth="198.0" promptText="Enter the location for your event" AnchorPane.leftAnchor="158.0" />
+      <Label layoutX="42.0" layoutY="123.0" text="Name" textFill="#c1bbbb" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="176.0" text="Description" textFill="#c1bbbb" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="230.0" text="Location" textFill="#c1bbbb" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateTime" layoutX="157.0" layoutY="287.0" opacity="0.66" prefHeight="26.0" prefWidth="198.0" AnchorPane.leftAnchor="158.0" />
+      <Label layoutX="42.0" layoutY="282.0" text="Date" textFill="#c1bbbb" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Slider fx:id="timeSlider" blockIncrement="1.0" layoutX="158.0" layoutY="349.0" max="1439.0" opacity="0.75" prefHeight="14.0" prefWidth="198.0" AnchorPane.leftAnchor="158.0" />
+      <Label layoutX="46.0" layoutY="341.0" text="Time" textFill="#c1bbbb" AnchorPane.leftAnchor="42.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="242.0" layoutY="371.0" text="Label" />
+      <Label fx:id="timeLabel" alignment="CENTER" layoutX="95.0" layoutY="342.0" prefHeight="28.0" prefWidth="56.0" textFill="#c1bbbb">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font></Label>
+      <ImageView fitHeight="30.0" fitWidth="35.0" layoutX="27.0" layoutY="14.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goBack.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="createButton" layoutX="176.0" layoutY="433.0" mnemonicParsing="false" onMouseClicked="#createButtonOnClick" prefHeight="26.0" prefWidth="81.0" text="Create" />
+   </children>
+</AnchorPane>

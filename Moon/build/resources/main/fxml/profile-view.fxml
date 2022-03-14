@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchor" minWidth="-Infinity" prefHeight="535.0" prefWidth="468.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ProfileController">
+   <children>
+      <ImageView fx:id="backgroundImageView" fitHeight="536.0" fitWidth="474.0" layoutX="-5.0" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" pickOnBounds="true">
+         <image>
+            <Image url="@../images/profileBackground.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imageViewGoBack" fitHeight="38.0" fitWidth="42.0" layoutX="423.0" layoutY="480.0" onMouseClicked="#goBack" onMouseEntered="#hoverOnItem" onMouseExited="#hoverOnItemIsOver" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goBack.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="backInfoImage" fitHeight="498.0" fitWidth="347.0" layoutX="65.0" layoutY="21.0" opacity="0.64" pickOnBounds="true" AnchorPane.leftAnchor="60.5" AnchorPane.rightAnchor="60.5">
+         <image>
+            <Image url="@../images/buttonsBarBack.jpg" />
+         </image>
+      </ImageView>
+      <VBox alignment="TOP_CENTER" layoutX="66.0" layoutY="190.0" prefHeight="58.0" prefWidth="347.0">
+         <children>
+            <Label fx:id="fullName" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="345.0" text="Name" textAlignment="CENTER" textFill="#b9b7b7">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="356.0" spacing="15.0">
+               <children>
+                  <Label fx:id="labelCountFriends" contentDisplay="CENTER" text="You have 0 friends." textFill="#fff6f6" />
+                  <Label fx:id="labelUnlockTabel" contentDisplay="CENTER" onMouseClicked="#clickOnSeeDetails" onMouseEntered="#hoverOnSeeDetails" onMouseExited="#hoverOnSeeDetailsOver" text="See more details" textFill="#7c7f8c" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="65.0" layoutY="279.0" prefHeight="38.0" prefWidth="338.0" text="Country" textFill="#b9b7b7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="64.0" layoutY="416.0" prefHeight="38.0" prefWidth="347.0" text="Email" textFill="#b9b7b7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="66.0" layoutY="352.0" prefHeight="38.0" prefWidth="347.0" text="DateOfBirth" textFill="#b9b7b7">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="editButtonDate" layoutX="301.0" layoutY="317.0" mnemonicParsing="false" onAction="#setEditButtonCountryOnAction" opacity="0.64" prefHeight="18.0" prefWidth="29.0" text="🖊" />
+      <TextField fx:id="userCountry" layoutX="152.0" layoutY="317.0" opacity="0.32" prefHeight="26.0" prefWidth="150.0" text="userCountry" AnchorPane.leftAnchor="152.0" AnchorPane.rightAnchor="166.0" />
+      <TextField fx:id="userEmail" layoutX="150.0" layoutY="452.0" opacity="0.32" prefHeight="26.0" prefWidth="150.0" text="userEmail" />
+      <DatePicker fx:id="userDate" layoutX="150.0" layoutY="390.0" opacity="0.32" prefHeight="18.0" prefWidth="150.0" promptText="userDate" />
+      <Label fx:id="editPassword" alignment="CENTER" layoutX="60.0" layoutY="491.0" onMouseClicked="#editPasswordOnAction" onMouseEntered="#hoverOnEditPassword" onMouseExited="#hoverOnEditPasswordOver" prefHeight="18.0" prefWidth="346.0" text="Change your password" textFill="#b7b4b4" />
+      <Button fx:id="editButtonCountry" layoutX="300.0" layoutY="390.0" mnemonicParsing="false" onAction="#setEditButtonDateOnAction" opacity="0.64" prefHeight="26.0" prefWidth="30.0" text="🖊" AnchorPane.rightAnchor="137.60000000000002" />
+      <Button fx:id="editButtonEmail" layoutX="300.0" layoutY="452.0" mnemonicParsing="false" onAction="#setEditButtonEmailOnAction" opacity="0.64" prefHeight="18.0" prefWidth="29.0" text="🖊" />
+      <ImageView fx:id="acceptRejectPane" blendMode="SRC_ATOP" fitHeight="106.0" fitWidth="252.0" layoutX="114.0" layoutY="152.0" pickOnBounds="true" visible="false">
+         <image>
+            <Image url="@../images/buttonsBack.jpg" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Button fx:id="acceptButton" layoutX="150.0" layoutY="201.0" mnemonicParsing="false" opacity="0.71" prefHeight="34.0" prefWidth="68.0" text="Accept" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="rejectButton" layoutX="262.0" layoutY="202.0" mnemonicParsing="false" opacity="0.71" prefHeight="34.0" prefWidth="68.0" text="Reject" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="labelAcceptReject" layoutX="126.0" layoutY="165.0" prefHeight="28.0" prefWidth="228.0" text="Do you want to accept this friend request?" textFill="#c9c9c9" visible="false" />
+      <TableView fx:id="tableViewFriendships" layoutX="60.0" layoutY="266.0" prefHeight="210.0" prefWidth="347.0" visible="false">
+        <columns>
+          <TableColumn fx:id="tableColumnFullName" prefWidth="93.59997177124023" />
+            <TableColumn fx:id="tableColumnDate" prefWidth="92.00006103515625" />
+          <TableColumn fx:id="tableColumnStatus" minWidth="0.0" prefWidth="111.19998168945312" />
+            <TableColumn fx:id="tableColumnAction" prefWidth="48.79998779296875" />
+        </columns>
+      </TableView>
+      <Pagination fx:id="pagination" layoutX="61.0" layoutY="277.0" prefHeight="250.0" prefWidth="346.0" visible="false" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="152.0" layoutY="40.0" opacity="0.68" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="164.0" AnchorPane.rightAnchor="164.0">
+         <image>
+            <Image url="@../images/icons8-user-90.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="540.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.RegisterController">
+   <center>
+      <AnchorPane prefHeight="568.0" prefWidth="449.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="backroundImageView" fitHeight="603.0" fitWidth="450.0" layoutX="-2.0" layoutY="-4.0" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" pickOnBounds="true">
+               <image>
+                  <Image url="@../images/login_backround.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="400.0" text="Password" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNameField" layoutX="201.0" layoutY="153.0" opacity="0.76" prefHeight="26.0" prefWidth="170.0" promptText="firstName" />
+            <Label layoutX="80.0" layoutY="201.0" text="Last Name" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lastNameField" layoutX="201.0" layoutY="201.0" opacity="0.76" prefHeight="26.0" prefWidth="170.0" promptText="lastName" />
+            <Label layoutX="80.0" layoutY="249.0" text="Email" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="201.0" layoutY="249.0" opacity="0.76" prefHeight="26.0" prefWidth="170.0" promptText="email" />
+            <Label layoutX="80.0" layoutY="296.0" text="Country" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countryField" layoutX="201.0" layoutY="296.0" opacity="0.76" prefHeight="26.0" prefWidth="170.0" promptText="country" />
+            <Label layoutX="80.0" layoutY="347.0" text="Date Of Birth" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="201.0" layoutY="399.0" opacity="0.76" prefHeight="26.0" prefWidth="169.0" promptText="password" />
+            <PasswordField fx:id="passwordFieldAgain" layoutX="201.0" layoutY="446.0" opacity="0.76" prefHeight="26.0" prefWidth="169.0" promptText="typePasswordAgain" />
+            <Label layoutX="80.0" layoutY="153.0" text="First Name" textFill="#b7b1b1">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="registerFromRegisterController" layoutX="160.0" layoutY="495.0" mnemonicParsing="false" onAction="#registerFromRegisterControllerAction" prefHeight="38.0" prefWidth="128.0" style="-fx-background-color: #3b3b3b;" text="Register" textFill="#aeaeae">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fx:id="moonLogo" fitHeight="100.0" fitWidth="106.0" layoutX="176.0" layoutY="38.0" opacity="0.69" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoMoon.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="197.0" layoutY="116.0" opacity="0.63" prefHeight="28.0" prefWidth="51.0" text="MOON" textFill="#cfcfcf">
+               <effect>
+                  <Lighting diffuseConstant="1.06" specularConstant="1.35" specularExponent="17.06" surfaceScale="3.89">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="exitButton" layoutX="411.0" layoutY="38.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="26.0" prefWidth="22.0" style="-fx-background-color: #3b3b3b;" text="x" textFill="#b99c9c">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+               </font>
+            </Button>
+            <Label fx:id="invaldiregisterLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="3.0" layoutY="546.0" prefHeight="18.0" prefWidth="444.0" textAlignment="CENTER" textFill="#f42727">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="dateOfBirthField" layoutX="200.0" layoutY="347.0" opacity="0.76" prefHeight="26.0" prefWidth="170.0" promptText="dateOfBirth" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,132 @@
+.pane {
+    -fx-background-color: rgba(50, 50, 50, 0.15);
+
+}
+
+.scroll-pane > .viewport {
+    -fx-background-color: rgba(50, 50, 50, 0.15)
+}
+
+.scroll-pane {
+    -fx-hbar-policy: never;
+}
+
+.scroll-bar {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#flowpane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-spacing: 10;
+    -fx-padding: 15;
+}
+
+#vbox {
+    -fx-background-color: rgba(100, 100, 100, 0.4);
+    -fx-max-height: 5000;
+    -fx-max-width: 5000;
+    -fx-pref-height: 220;
+    -fx-pref-width: 186;
+    -fx-alignment: center;
+    -fx-background-radius: 5;
+    -fx-spacing: 7;
+    -fx-padding: 10;
+    -fx-start-margin: 10;
+}
+
+#name-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 22;
+    -fx-text-fill: #c9c9c9;
+}
+
+#owner-label {
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+    -fx-font-weight: bold;
+}
+
+#description-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+}
+
+#textArea .content {
+    -fx-background-color: rgba(70, 70, 70, 0.5);
+    -fx-border-radius: 20;
+}
+
+#location-label {
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+    -fx-padding: 0 0 35 0; /*top right bottom left*/
+}
+
+#date-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+}
+
+#participants-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+}
+
+#button {
+    -fx-background-color: rgba(35, 35, 35, 0.75);
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+    -fx-text-fill: #c9c9c9;
+}
+
+#participants-vbox {
+    -fx-background-color: rgba(70, 70, 70, 0.8);
+    -fx-alignment: TOP_CENTER;
+}
+
+
+#user-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 10;
+    -fx-text-fill: #c9c9c9;
+}
+
+#notificationView {
+    -fx-hbar-policy: never;
+    -fx-background-color: rgba(50, 50, 50, 0.4);
+}
+
+#notificationView .list-cell {
+    -fx-background-color: transparent;
+}
+
+#notificationViewTextCell {
+    -fx-border-color: transparent transparent rgba(200, 200, 200, 0.7) transparent;
+}
+
+#notificationText {
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-fill: rgba(200, 200, 200, 0.7);
+}
+
+#notificationView .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: -7;
+}
+
+#notificationView .scroll-bar {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#notificationView .scroll-bar .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}

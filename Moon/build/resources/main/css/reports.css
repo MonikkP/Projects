@@ -1,0 +1,85 @@
+#flow-pane {
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-spacing: 15;
+    -fx-padding: 15;
+    -fx-border-width: 5;
+
+    -fx-background-radius: 5;
+    -fx-background-color: rgba(59, 59, 59, 0.7);
+}
+
+#new-friends-number {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+#pending-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+#nr-mess {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+#rejected-label {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+#nr-sent {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+#nr-received {
+    -fx-font-weight: bold;
+    -fx-font-size: 12;
+    -fx-text-fill: #c9c9c9;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-hbar-policy: never;
+    -fx-background-color: transparent;
+}
+
+.scroll-bar {
+    -fx-background-color: rgba(100, 100, 100, 0.4);
+}
+
+.scroll-bar > .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+.chart-pie-label {
+    -fx-fill: #c9c9c9;
+}
+
+
+.choice-box .menu-item:focused {
+    -fx-background-color: grey;
+}
+
+.choice-box {
+    -fx-background-color: rgba(125, 125, 125, 0.7);
+}
+
+#anchor {
+    -fx-border-radius: 30;
+}
+
+#backround {
+    -fx-border-radius: 30;
+}
+

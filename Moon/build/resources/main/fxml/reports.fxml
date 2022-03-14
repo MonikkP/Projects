@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="anchor" prefHeight="642.0" prefWidth="678.0"  stylesheets="@../css/reports.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ReportsController">
+   <children>
+
+      <ImageView id="backround" fitHeight="659.0" fitWidth="688.0" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" pickOnBounds="true">
+         <image>
+            <Image url="@../images/mainBack4.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="goBack" fitHeight="40.0" fitWidth="52.0" layoutX="23.0" layoutY="20.0" onMouseClicked="#goBack" opacity="0.76" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goBack.png" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="fromDatePicker" layoutX="256.0" layoutY="40.0" opacity="0.76" promptText="From" AnchorPane.leftAnchor="256.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="256.0" layoutY="79.0" opacity="0.76" promptText="To" AnchorPane.rightAnchor="256.8" />
+      <Button fx:id="button1" layoutX="108.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#button1OnClick" opacity="0.76" text="Show Raport 👨‍👧‍👧 + 💬" />
+      <Button fx:id="button2" layoutX="448.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#button2OnClick" opacity="0.76" text="Show Raport 🙎‍♂️ + 💬" />
+      <Label fx:id="description1Report" alignment="CENTER" layoutY="166.0" prefHeight="18.0" prefWidth="688.0" text="See the friends you made and the messages you received over a period of time" textFill="#c4c4c4" visible="false" />
+      <Label fx:id="description2Report" alignment="CENTER" layoutY="166.0" prefHeight="18.0" prefWidth="688.0" text="See messages recived from a friend over a period of time" textFill="#c4c4c4" visible="false" />
+      <ChoiceBox fx:id="chooseBoxFriends" layoutX="448.0" layoutY="194.0" opacity="0.66" prefHeight="26.0" prefWidth="138.0" />
+      <ScrollPane fx:id="mergiterog" layoutX="73.0" layoutY="230.0" prefHeight="414.0" prefWidth="476.0" AnchorPane.leftAnchor="106.0" AnchorPane.rightAnchor="106.0">
+         <content>
+            <FlowPane id="flow-pane" fx:id="friendsFlowPane" prefWrapLength="300.0" />
+         </content>
+      </ScrollPane>
+      <Label fx:id="warningDates" alignment="CENTER" layoutX="247.0" layoutY="134.0" prefHeight="18.0" prefWidth="199.0" text="Please select the dates!" textFill="#ff2c2c" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="347.0" layoutY="198.0" text="Choose a friend:" textFill="#a1a1a1" />
+      <TextField fx:id="fileName" layoutX="108.0" layoutY="194.0" opacity="0.67" prefHeight="26.0" prefWidth="133.0" promptText="File Name" visible="false" />
+   </children>
+</AnchorPane>

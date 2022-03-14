@@ -1,0 +1,6 @@
+.list-view {
+    --fxbackground-color: rgba(0, 100, 100, 0.2);
+}
+.list-cell {
+    --fxbackground-color: rgba(0, 100, 100, 0.2);
+}

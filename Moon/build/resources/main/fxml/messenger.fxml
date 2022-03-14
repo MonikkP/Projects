@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="866.0" stylesheets="@../css/messenger.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.MessengerController">
+   <children>
+      <ImageView fx:id="backgroundImageView" fitHeight="567.0" fitWidth="869.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/messengerBackground.jpg" />
+         </image>
+      </ImageView>
+      <HBox layoutY="66.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="867.0">
+         <children>
+            <VBox prefHeight="502.0" prefWidth="235.0">
+               <children>
+                  <ListView fx:id="conversationsListView" prefHeight="502.0" prefWidth="161.0" style="-fx-background-color: rgb(10,10,10);" />
+                  <ImageView fx:id="newConversationImageView" fitHeight="62.0" fitWidth="70.0" onMouseClicked="#addNewConversation" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/iconNewConversationWhite.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox prefHeight="502.0" prefWidth="641.0">
+               <children>
+                  <ScrollPane fx:id="chatScrollPanel" fitToWidth="true" prefHeight="514.0" prefWidth="643.0">
+                     <content>
+                        <VBox fx:id="chatVerticalBox" prefHeight="506.0" prefWidth="642.0" style="-fx-background-color: rgb(230,230,230);" />
+                     </content>
+                  </ScrollPane>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextArea fx:id="chatTextArea" prefHeight="64.0" prefWidth="573.0" promptText="Type your message here..." wrapText="true" />
+                        <ImageView fx:id="sendMessageImageView" fitHeight="64.0" fitWidth="123.0" onMouseClicked="#sendMessage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/rocketSendButton.gif" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <ImageView fx:id="topBar" fitHeight="66.0" fitWidth="870.0" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" opacity="0.99" pickOnBounds="true">
+         <image>
+            <Image url="@../images/buttonsBarBack.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="profileImageButton" fitHeight="34.0" fitWidth="37.0" layoutX="726.0" layoutY="16.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/profileLogo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="moonLogo" fitHeight="34.0" fitWidth="30.0" layoutX="774.0" layoutY="16.0" onMouseClicked="#logoOnAction" opacity="0.69" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logoMoon.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="exitButton" layoutX="821.0" layoutY="16.0" mnemonicParsing="false" onAction="#exitButtonOnAction" opacity="0.8" prefHeight="34.0" prefWidth="30.0" text="❌" textFill="#aeaeae">
+         <font>
+            <Font name="Candara" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="774.0" layoutY="41.0" opacity="0.63" prefHeight="10.0" prefWidth="30.0" text="MOON" textFill="#cfcfcf">
+         <effect>
+            <Lighting diffuseConstant="1.06" specularConstant="1.35" specularExponent="17.06" surfaceScale="3.89">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+            </Lighting>
+         </effect>
+         <font>
+            <Font name="System Bold" size="9.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="goBack" fitHeight="34.0" fitWidth="41.0" layoutX="14.0" layoutY="16.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goBack.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="notificationsImageView" fitHeight="46.0" fitWidth="68.0" layoutX="659.0" layoutY="10.0" onMouseClicked="#showNotifications" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bell-static.png" />
+         </image>
+      </ImageView>
+      <ListView id="notificationView" fx:id="notificationsListView" layoutX="586.0" layoutY="66.0" prefHeight="218.0" prefWidth="210.0" />
+   </children>
+</AnchorPane>

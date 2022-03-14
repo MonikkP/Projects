@@ -1,0 +1,42 @@
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="FindOneUser">SELECT * FROM USERS WHERE id = ?</entry>
+
+    <entry key="FindAllUsers">SELECT * FROM users</entry>
+
+    <entry key="SaveOneUser">INSERT INTO USERS (first_name, last_name , date_of_birth, country) VALUES (?, ?, ?, ?)</entry>
+
+    <entry key="DeleteAllFriendshipsOfUser">DELETE FROM friendships WHERE id1 = ? or id2 = ?</entry>
+
+    <entry key="DeleteAllMessagesSentToUser">DELETE FROM message_user WHERE id_to_user = ?</entry>
+
+    <entry key="DeleteAllMessagesSentFromUser">
+        DELETE FROM message_user where id_message IN
+        (SELECT id FROM messages WHERE id_from_user = ?);
+        DELETE FROM messages WHERE id_from_user = ?;
+    </entry>
+
+    <entry key="DeleteOneUser">DELETE FROM users WHERE id = ?</entry>
+
+    <entry key="FindOneFriendship">SELECT * FROM friendships WHERE id1 = ? AND id2 = ? OR id1 = ? AND id2 = ?</entry>
+
+    <entry key="FindAllFriendships">SELECT * FROM friendships</entry>
+
+    <entry key="SaveOneFriendship">INSERT INTO friendships (id1 , id2, date_of_friendship, status) VALUES (?, ?, ?, ?)</entry>
+
+    <entry key="DeleteOneFriendship">DELETE FROM friendships WHERE id1 = ? AND id2 = ? OR id1 = ? AND id2 = ?</entry>
+
+    <entry key="UpdateFriendship">UPDATE friendships SET status = ? WHERE id1 = ? and id2 = ? or id1 = ? and id2 = ?</entry>
+
+    <entry key="FindOneMessage">SELECT * FROM messages WHERE id = ?</entry>
+
+    <entry key="FindReceiversOfMessage">SELECT id_to_user FROM message_user WHERE id_message = ?</entry>
+
+    <entry key="FindAllMessages">SELECT * FROM MESSAGES</entry>
+
+    <entry key="SaveOneMessage">INSERT INTO messages (message, send_date, id_from_user, id_reply) VALUES (?, ?, ?, ?)</entry>
+
+    <entry key="SaveOneRecipient">INSERT INTO message_user VALUES ((SELECT MAX(id) FROM messages), ?)</entry>
+
+    <entry key="DeleteOneMessage">DELETE FROM MESSAGES WHERE id = ?</entry>
+</properties>

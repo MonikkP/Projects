@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="360.0" prefWidth="639.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ConversationController">
+   <children>
+      <ImageView fitHeight="360.0" fitWidth="734.0" onMouseClicked="#hideUserSearchResults" onMouseDragged="#reactWhenDragged" onMousePressed="#reactWhenPressed" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/conversationBackground.jpg" />
+         </image>
+      </ImageView>
+      <ListView fx:id="searchResultsListView" layoutX="87.0" layoutY="69.0" onMouseClicked="#searchedUserSelected" prefHeight="200.0" prefWidth="300.0" />
+      <VBox layoutX="32.0" layoutY="40.0" prefHeight="198.0" prefWidth="355.0">
+         <children>
+            <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="47.0" prefWidth="354.0">
+               <children>
+                  <TextField fx:id="searchBarTextField" nodeOrientation="LEFT_TO_RIGHT" onMouseClicked="#showUserSearchResults" prefHeight="36.0" prefWidth="300.0" promptText="🔎 Search" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="30.0" prefWidth="75.0" text="Receivers:" textFill="#eadada" />
+                  <FlowPane fx:id="receiversFlowPane" prefHeight="100.0" prefWidth="300.0" />
+               </children>
+            </HBox>
+            <HBox prefHeight="61.0" prefWidth="355.0">
+               <children>
+                  <Label prefHeight="94.0" prefWidth="62.0" text="Message:" textFill="#ece9e9" />
+                  <TextArea fx:id="messageTextArea" prefHeight="50.0" prefWidth="225.0" promptText="Type your message here..." wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextArea>
+                  <ImageView fitHeight="62.0" fitWidth="77.0" onMouseClicked="#sendMessage" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/rocketSendButton.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="74.0" fitWidth="77.0" layoutX="543.0" layoutY="269.0" onMouseClicked="#goBack" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/goBack.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

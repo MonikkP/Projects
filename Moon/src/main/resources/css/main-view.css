@@ -1,0 +1,60 @@
+#notificationView {
+    -fx-hbar-policy: never;
+    -fx-background-color: rgba(50, 50, 50, 0.4);
+}
+
+#notificationView .list-cell {
+    -fx-background-color: transparent;
+}
+
+#notificationViewTextCell {
+    -fx-border-color: transparent transparent rgba(200, 200, 200, 0.7) transparent;
+}
+
+#notificationText {
+    -fx-font-weight: bold;
+    -fx-font-size: 14;
+    -fx-fill: rgba(200, 200, 200, 0.7);
+}
+
+#notificationView .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-padding: -7;
+}
+
+#notificationView .scroll-bar {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+#notificationView .scroll-bar .thumb {
+    -fx-background-color: rgba(50, 50, 50, 0.5);
+}
+
+.text-field:focused {
+    -fx-background-color: -fx-focus-color, -fx-text-box-border, -fx-control-inner-background;
+    -fx-background-insets: -0.4, 1, 2;
+    -fx-background-radius: 3.4, 2, 2;
+}
+
+.table-view .column {
+    -fx-border-style: none;
+}
+
+.table-view .column-header-background {
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+}
+
+.table-view .table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+
+/*.table-row-cell:empty {
+    -fx-background-color: transparent;
+}
+.table-view {
+     -fx-background-color: transparent;
+}*/
+
+
